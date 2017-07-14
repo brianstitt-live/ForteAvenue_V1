@@ -41,6 +41,42 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.profile', {
+    url: '/profile',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/profile.html'
+      }
+    }
+  })
+
+  .state('app.feeds', {
+    url: '/feeds',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/feeds.html'
+      }
+    }
+  })
+
+  .state('app.networks', {
+    url: '/networks',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/networks.html'
+      }
+    }
+  })
+
+  .state('app.messages', {
+    url: '/messages',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/messages.html'
+      }
+    }
+  })
+
   .state('app.browse', {
       url: '/browse',
       views: {
@@ -58,6 +94,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+
+    .state('app.playlists2', {
+      url: '/playlists2',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/playlists2.html',
+          controller: 'PlaylistsCtrl2'
+        }
+      }
+    })
+
 
   .state('app.single', {
     url: '/playlists/:playlistId',

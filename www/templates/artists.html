@@ -1,0 +1,25 @@
+<ion-view title="Artists List">
+        <ion-content>
+          <ion-list>
+              <ion-item ng-repeat='artist in artists' class="item-thumbnail-left
+              item-text-wrap">
+                 <img src="img/{{artist.shortname}}_tn.jpg" alt="{{artist.name}} Photo">
+                <h2>{{artist.name}}</h2>
+                  <h3>{{artist.reknown}}</h3>
+                  <p>{{artist.bio}}</p>
+              </ion-item>
+          </ion-list>
+        </ion-content>
+    </ion-view>
+
+<!--
+<ion-view view-title="Artists List">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="artist in artists" href="#/app/artists/{{artist.id}}">
+        {{artist.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+-->

@@ -1,0 +1,28 @@
+<ion-view view-title="Offenders List">
+        <ion-content>
+          <ion-list>
+              <ion-item ng-repeat='x in offenders' class="item-avatar-right">
+              <i class="ion-ios-contact-outline-64"></i>
+                 <h2>{{x.Full}} - {{x.Number}}</h2>
+                 <h3>{{x.Address}} {{x.City}}, {{x.State}}. {{x.Zip}}</h3>
+                 <h3>Charge:{{x.Charge}}</h3>
+                 <h4>Level: {{x.Level}}</h4>
+                 <h4>Searching For: {{x.SearchingFor}}</h4>
+              </ion-item>
+          </ion-list>
+        </ion-content>
+        <ion-tabs class="tabs-dark tabs-icon-top tabs-striped">
+
+  <ion-tab title="Cases" icon="ion-ios-filing"  >
+    <!-- Tab 1 content -->
+  </ion-tab>
+
+  <ion-tab title="About" icon="ion-paper-airplane">
+    <!-- Tab 2 content -->
+  </ion-tab>
+
+  <ion-tab title="Settings" icon="ion-playstation">
+    <!-- Tab 3 content -->
+  </ion-tab>
+</ion-view>
+</ion-tabs>

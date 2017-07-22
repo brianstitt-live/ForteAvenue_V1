@@ -42,7 +42,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
+  $scope.MyPlaylists99 = [
     { title: 'Hip Hop', id: 1 },
     { title: 'Jazz', id: 2 },
     { title: 'DC Go-Go', id: 3 },
@@ -55,16 +55,17 @@ angular.module('starter.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
-.controller('PlaylistsCtrl2', function($scope) {
-  $scope.playlists2 = [
-    { title: 'Country', id: 1 },
-    { title: 'Bluegrass', id: 2 },
-    { title: 'Trance', id: 3 },
-    { title: 'Big Country', id: 4 },
-    { title: 'Heavy Metal', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
+ .controller('ListController', ['$scope','$http', function($scope, $http) {
+    $http.get('js/data.json').success(function(data) {
+        $scope.artists = data.speakers;
+    })
+}])
 
-.controller('PlaylistCtrl2', function($scope, $stateParams) {
-});
+.controller('OffenderController', ['$scope','$http', function($scope, $http) {
+   $http.get('js/team3.json').success(function(data) {
+       $scope.offenders = data;
+       console.log(data);
+   })
+}])
+
+;

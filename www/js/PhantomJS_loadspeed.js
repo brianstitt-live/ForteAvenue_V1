@@ -24,4 +24,4 @@ page.open(address, function(status) {
 navigate t to the directory where the JS file lives
 and type:
 
-  PhantomJS_loadspeed.js http://www.google.com
+    phantomjs PhantomJS_loadspeed.js http://www.google.com

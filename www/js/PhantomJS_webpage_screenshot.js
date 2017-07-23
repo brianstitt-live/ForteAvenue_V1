@@ -10,7 +10,7 @@ page.open('http://google.com', function(status) {
 navigate to the directory where the JS file lives
 and type:
 
-  PhantomJS_webpage_screenshot.js
+    phantomjs PhantomJS_webpage_screenshot.js
 
   The script will open http://google.com, and take a picture of the webpage
   and save it as exmample.png

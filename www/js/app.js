@@ -34,6 +34,25 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
+        .state('app.ScientificFacts', {
+            url: '/ScientificFacts',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/NAV_SF.html'
+                }
+            }
+        })
+
+        .state('app.MoreScientificFacts', {
+            url: '/MoreScientificFacts',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/NAV_MoreSF.html'
+                }
+            }
+        })
+
+
 /*
   .state('app.search', {
     url: '/search',
@@ -43,7 +62,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-
+*/
+      
   .state('app.profile', {
     url: '/profile',
     views: {
@@ -70,7 +90,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-*/
+
   .state('app.artists', {
       url: '/artists',
       views: {
@@ -129,7 +149,27 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
           }
         })
-/*
+
+            .state('app.MasterList', {
+                url: '/MasterList',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/MasterList.html',
+                    }
+                }
+            })
+
+                  .state('app.MasterListDetail', {
+                      url: '/MasterListDetail',
+                      views: {
+                          'menuContent': {
+                              templateUrl: 'templates/MasterList_Details.html',
+                          }
+                      }
+                  })
+
+
+
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
@@ -139,7 +179,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-*/
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/artists');
 });

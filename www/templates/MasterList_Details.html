@@ -1,6 +1,9 @@
-﻿<ion-view title="Master List Details">
+﻿<ion-view title="Artist Detail">
     <ion-content>
-        <h2>{{person.firstName}} {{person.lastName}}</h2>
-        <p>{{person.bio}}</p>
+        <img src="img/{{artist.id}}{{artist.shortname}}_tn.jpg" alt="{{artist.name}} Photo">
+        <h2>{{artist.name}}</h2>
+        <h3>{{artist.reknown}}</h3>
+        <p>{{artist.bio | limitTo: 100}}{{artist.bio.length > 100 ? ' &hellip;' : '' }}</p>
+
     </ion-content>
 </ion-view>

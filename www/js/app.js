@@ -160,10 +160,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             })
 
                   .state('app.MasterListDetail', {
-                      url: '/MasterListDetail',
+                      url: '/MasterListDetail/:id',
                       views: {
                           'menuContent': {
                               templateUrl: 'templates/MasterList_Details.html',
+                              controller: 'ListController'
                           }
                       }
                   })
@@ -182,4 +183,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/artists');
+
 });

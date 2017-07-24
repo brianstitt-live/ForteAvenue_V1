@@ -7,12 +7,15 @@
             </label>
           </ion-header-bar>
           <ion-list>
-              <ion-item ng-repeat='artist in artists  | filter: query' class="item-thumbnail-left
+              <ion-item ng-repeat='artist in artists' class="item-thumbnail-left
               item-text-wrap">
-                 <img src="img/{{artist.shortname}}_tn.jpg" alt="{{artist.name}} Photo">
-                <h2>{{artist.name}}</h2>
-                  <h3>{{artist.reknown}}</h3>
-                  <p>{{artist.bio | limitTo: 100}}{{artist.bio.length > 100 ? ' &hellip;' : '' }}</p>
+                  <a href="#/app/MasterListDetail/{{artist.id}}">
+                      <img src="img/{{artist.shortname}}_tn.jpg" alt="{{artist.name}} Photo">
+                      <h2>{{artist.id}}</h2>
+                      <h2>{{artist.name}}</h2>
+                      <h3>{{artist.reknown}}</h3>
+                      <p>{{artist.bio | limitTo: 100}}{{artist.bio.length > 100 ? ' &hellip;' : '' }}</p>
+                  </a>
               </ion-item>
           </ion-list>
         </ion-content>

@@ -1,0 +1,42 @@
+<ion-view title="Form Sample Other Types">
+        <ion-content>
+              <label class="item item-input"/>
+              <span class="input-label">First Name</span>
+                <input type="text" placeholder="Your First Name">
+            </label>
+            <label class="item item-input"/>
+              <span class="input-label">Last Name</span>
+                <input type="text" placeholder="Your Last Name">
+            </label>
+    <label class="item item-input">
+       <span class="input-label">Comments</span>
+      <textarea placeholder="Comments"></textarea>
+    </label>
+    <div class="item item-divider checkbox-energized">I want to be a ...
+      <ion-checkbox ng-model="isRockStar">Rock Start</ion-checkbox>
+      <ion-checkbox ng-model="isMovieStar">Movie Star</ion-checkbox>
+      <ion-checkbox ng-model="isProdigy">MusicProdigy</ion-checkbox>
+    </div>
+
+    <div class="item item-divider checkbox-energized">Favorite Social Media ...
+      <ion-radio ng-model="choice" ng-value="''">Facebook</ion-radio>
+      <label class="item item-radio">
+        <ion-radio  ng-model="choice" ng-value="'twitter'">Twitter </ion-radio>
+        <i class="radio-icon ion-social-twitter"></i>
+      </label>
+    </div>
+    <div class="item item-divider checkbox-energized">Toggle</div>
+
+  <div class="item item item-toggle">
+    <span class="input-label">Awesomeness</span>
+    <label class="toggle">
+      <input type="checkbox">
+      <div class="track"><div class="handle"></div></div>
+    </label>
+  </div>
+<div>
+<!--   <div class="item item-divider">Favorite Social Media network ...</div> -->
+
+
+        </ion-content>
+    </ion-view>

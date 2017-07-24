@@ -1,7 +1,13 @@
 <ion-view view-title="Playlists">
   <ion-content>
+    <ion-header-bar class="bar-light item-input-inset ">
+      <label class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input ng-model="query" type="search" placeholder="Search">
+      </label>
+    </ion-header-bar>
     <ion-list>
-      <ion-item ng-repeat="playlist in MyPlaylists99" href="#/app/playlists/{{playlist.id}}">
+      <ion-item ng-repeat='playlist in MyPlaylists99 | filter: query' href="#/app/playlists/{{playlist.id}}">
         {{playlist.title}}
       </ion-item>
     </ion-list>

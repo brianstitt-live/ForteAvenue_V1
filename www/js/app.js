@@ -81,6 +81,35 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.formsample', {
+        url: '/formsample',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/form_sample.html',
+          }
+        }
+      })
+
+      .state('app.actionsheet', {
+          url: '/actionsheet',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/actionsheet.html',
+              controller: 'ActionSheetCtrl'
+            }
+          }
+        })
+
+
+      .state('app.formsample-othertypes', {
+          url: '/formsample-othertypes',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/form_sample-other_types.html',
+            }
+          }
+        })
+
     .state('app.playlists', {
         url: '/playlists',
         views: {

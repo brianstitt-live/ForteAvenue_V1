@@ -55,11 +55,15 @@ angular.module('starter.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
- .controller('ListController', ['$scope','$http', function($scope, $http) {
+ .controller('ListController', ['$scope','$http','$state', function($scope, $http, $state) {
     $http.get('js/data.json').success(function(data) {
-        $scope.artists = data.speakers;
+          $scope.artists = data.speakers;
+          $scope.whichartist = $state.params.aId;
+          console.log(data);
     })
 }])
+
+
 
 .controller('ActionSheetCtrl', function($scope, $ionicActionSheet) {
 

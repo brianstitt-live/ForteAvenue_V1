@@ -63,7 +63,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 */
-      
+
   .state('app.profile', {
     url: '/profile',
     views: {
@@ -100,6 +100,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+
+    .state('app.MasterListDetail', {
+        url: '/artists/:aId',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/MasterList_Details.html',
+                controller: 'ListController'
+            }
+        }
+    })
+
 
     .state('app.formsample', {
         url: '/formsample',
@@ -149,7 +160,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
           }
         })
-
+/*
             .state('app.MasterList', {
                 url: '/MasterList',
                 views: {
@@ -158,28 +169,19 @@ angular.module('starter', ['ionic', 'starter.controllers'])
                     }
                 }
             })
+*/
 
-                  .state('app.MasterListDetail', {
-                      url: '/MasterListDetail/:id',
-                      views: {
-                          'menuContent': {
-                              templateUrl: 'templates/MasterList_Details.html',
-                              controller: 'ListController'
-                          }
+
+
+                  .state('app.single', {
+                    url: "/playlists/:playlistId",
+                    views: {
+                      'menuContent': {
+                        templateUrl: "templates/playlist.html",
+                        controller: 'PlaylistCtrl'
                       }
+                    }
                   })
-
-
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
-  })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/artists');

@@ -1,9 +1,19 @@
 ﻿<ion-view title="Artist Detail">
     <ion-content>
-        <img src="img/{{artist.id}}{{artist.shortname}}_tn.jpg" alt="{{artist.name}} Photo">
-        <h2>{{artist.name}}</h2>
-        <h3>{{artist.reknown}}</h3>
-        <p>{{artist.bio | limitTo: 100}}{{artist.bio.length > 100 ? ' &hellip;' : '' }}</p>
+      <ion-list class=list-inset>
 
+      <ion-item
+        ng-repeat='artist in artists' filter: | { shortname: whichartist }
+        class="item-thumbnail-left
+        item-text-wrap">
+
+                <img src="img/{{artist.shortname}}_tn.jpg" alt="{{artist.name}} Photo">
+                Artist ID: <h2>{{artist.id}}</h2>
+                Artist Name: <h2>{{artist.name}}</h2>
+                Artist Reknown for: <h3>{{artist.reknown}}</h3>
+                Artist Biography: <p>{{artist.bio}}</p>
+
+      </ion-item>
+      </ion-list>
     </ion-content>
 </ion-view>

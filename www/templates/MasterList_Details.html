@@ -3,7 +3,8 @@
       <ion-list class=list-inset>
 
       <ion-item
-        ng-repeat='artist in artists' filter: | { shortname: whichartist }
+        ng-repeat="artist in artists filter: | { shortname: whichartist }"
+            
         class="item-thumbnail-left
         item-text-wrap">
 

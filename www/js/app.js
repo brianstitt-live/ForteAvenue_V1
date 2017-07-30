@@ -160,6 +160,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
           }
         })
+
+        .state('app.cardanimate', {
+            url: '/cardanimate',
+            views: {
+              'menuContent': {
+                templateUrl: 'templates/cardanimate.html'
+              }
+            }
+          })
 /*
             .state('app.MasterList', {
                 url: '/MasterList',

@@ -1,10 +1,32 @@
-.chat-item.ng-enter {
-    -webkit-animation: fadeInLeft 1s;
-    animation: fadeInLeft 1s;
+.star>.item-content {
+  background-color: #EEE8D6 !important
 }
 
+.splash {
+  background: url(../img/skyline.jpg) no-repeat
+    center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.branding {
+  width: 50%;
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+
+.chat-item.ng-enter {
+    -webkit-animation: fadeInLeft 2s;
+    animation: fadeInLeft 1s;
+},
+
 .chat-item.ng-enter-stagger {
-  -webkit-animation-delay:200ms;
+  -webkit-animation-delay:500ms;
   animation-delay:200ms;
 
   /* override to make sure it's not inherited from other styles */

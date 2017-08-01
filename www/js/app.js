@@ -101,6 +101,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.feeds', {
+        url: '/feeds',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/feeds.html',
+            controller: 'FeedsController'
+          }
+        }
+      })
+
     .state('app.MasterListDetail', {
         url: '/artists/:aId',
         views: {
@@ -169,6 +179,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
               }
             }
           })
+
+          .state('app.tabbar', {
+              url: '/tabbar',
+              views: {
+                'menuContent': {
+                  templateUrl: 'templates/tabbar.html'
+                }
+              }
+            })
+
+            .state('app.splash', {
+                url: '/splash',
+                views: {
+                  'menuContent': {
+                    templateUrl: 'templates/splash.html'
+                  }
+                }
+              })
 /*
             .state('app.MasterList', {
                 url: '/MasterList',
@@ -193,6 +221,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
                   })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/artists');
+  $urlRouterProvider.otherwise('/app/splash');
 
 });

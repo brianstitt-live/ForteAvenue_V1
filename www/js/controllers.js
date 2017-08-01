@@ -63,9 +63,22 @@ angular.module('starter.controllers', [])
     })
 }])
 
-
+.controller('FeedsController', ['$scope','$http','$state', function($scope, $http, $state) {
+   $http.get('js/feeddata.json').success(function(data) {
+         $scope.artists = data.speakers;
+         $scope.whichartist = $state.params.aId;
+         console.log(data);
+   })
+}])
 
 .controller('ActionSheetCtrl', function($scope, $ionicActionSheet) {
+
+
+
+
+
+
+
 
   $scope.showActionsheet = function() {
 

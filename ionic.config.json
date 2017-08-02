@@ -1,6 +1,6 @@
 {
   "name": "ForteAvenue_V1",
-  "app_id": "3898822f",
+  "app_id": "25ae6ccc",
   "type": "ionic1",
   "watchPatterns": [
     "scss/**/*"
